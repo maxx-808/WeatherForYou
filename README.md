@@ -14,3 +14,10 @@ once searched, the current weather, and 5 day forecast pulls up on the screen
 i got the city name to go into local storage shown here, couldnt get it out to single buttons to click and search again
 ![weather4](https://user-images.githubusercontent.com/69176601/98455170-14ad6280-2111-11eb-9c06-cd0f3fdb7486.jpg)
 
+
+urls:
+
+https://maxx-808.github.io/WeatherForYou/
+
+
+https://github.com/maxx-808/WeatherForYou.git
