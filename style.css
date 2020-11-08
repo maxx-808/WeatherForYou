@@ -1,0 +1,72 @@
+
+header {
+    background-color: darkgrey;
+    text-align: center;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+#submit-column {
+    background-color: lightgrey;
+}
+
+#current-ul {
+    list-style: none;
+    margin-bottom: 5px;
+    width: 250px;
+}
+
+#city-section {
+    margin-top: 10px;
+    height: 500px;
+}
+
+#current-weather {
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    height: 250px;
+    margin-left: 20px;
+}
+
+#forecast-weather {
+    margin-left: 20px;
+}
+
+#cityName,
+#weather-icon {
+    margin-left: 20px;
+}
+
+.hide {
+    opacity: 0%;
+}
+
+.favorable {
+    background-color: green;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.severe {
+    background-color: red;
+}
+
+.forecast {
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    height: 200px;
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.forecast-ul {
+    list-style: none;
+    padding-left: 10px;
+    width: 80%;
+}

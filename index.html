@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--bootstrap css-->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--personal css-->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather for You</title>
+</head>
+<body>
+    <header id="title">
+        <h2>Weather  For You</h2>
+        <h4>Get the current weather for your city and the forecast for the next 5 days</h4>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div id="submit-column" class="col-3">
+                <section id="city-section">
+                    <input type="text" id="city-input" class="col-7" autocomplete="off">
+                    <button id="city-submit" class="btn col-4">Search</button>
+                </section>
+                <section id="history-section">
+                    
+                </section>
+            </div>
+
+            <div id="current-column" class="col-9">
+                <div id="current-weather" class="row">
+                    <section>
+                        <h2 id="cityName"></h2>
+                        <img id="weather-icon" src="" alt="weather icon" />
+                        <ul id="current-ul">
+                            <li id="temperature"></li>
+                            <li id="humidity"></li>
+                            <li id="windSpeed"></li>
+                            <li id="uv-index"></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div id="forecast-weather" class="row">
+                    <div id="day1" class="col forecast">
+                        <h6 id="day-1"></h6>
+                        <img id="fIcon1" src="" alt="weather icon" />
+                        <ul class="forecast-ul">        
+                            <li id="fTemp1"></li>
+                            <li id="fHumid1"></li>
+                        </ul>
+                    </div>
+                    <div id="day2" class="col forecast">
+                        <h6 id="day-2"></h6>
+                        <img id="fIcon2" src="" alt="weather icon" />
+                        <ul class="forecast-ul">
+                            <li id="fTemp2"></li>
+                            <li id="fHumid2"></li>
+                        </ul>
+                    </div>
+                    <div id="day3" class="col forecast">
+                        <h6 id="day-3"></h6>
+                        <img id="fIcon3" src="" alt="weather icon" />
+                        <ul class="forecast-ul">
+                            <li id="fTemp3"></li>
+                            <li id="fHumid3"></li>
+                        </ul>
+                    </div>
+                    <div id="day4" class="col forecast">
+                        <h6 id="day-4"></h6>
+                        <img id="fIcon4" src="" alt="weather icon" />
+                        <ul class="forecast-ul">
+                            <li id="fTemp4"></li>
+                            <li id="fHumid4"></li>
+                        </ul>
+                    </div>
+                    <div id="day5" class="col forecast">
+                        <h6 id="day-5"></h6>
+                        <img id="fIcon5" src="" alt="weather icon" />
+                        <ul class="forecast-ul">
+                            <li id="fTemp5"></li>
+                            <li id="fHumid5"></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <section id="weather-forecast">
+                    
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <!--javascripts-->
+    <script src="./app.js"></script>
+</body>
+</html>
