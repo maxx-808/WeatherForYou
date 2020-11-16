@@ -23,4 +23,3 @@ https://maxx-808.github.io/WeatherForYou/
 https://github.com/maxx-808/WeatherForYou.git
 
 
-<img width="1128" alt="screen_shot_2020-11-13_at_9 22 18_pm" src="https://user-images.githubusercontent.com/69176601/99157653-f85c7900-266e-11eb-88f1-b274afbb42d8.png">
