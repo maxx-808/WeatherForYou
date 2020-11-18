@@ -15,14 +15,14 @@ $(document).ready(function () {
     $("#fIcon5").attr('class', 'hide');
 
     //function when submit is clicked
-    citySearch.on("click", function() {
+    citySearch.on("click", function () {
         //variables for current day weather
         let weatherSearch = "https://api.openweathermap.org/data/2.5/weather?q=";
         let weatherAppid = "&appid=";
         let cityInput = $("#city-input").val();
         let unitsQuery = "&units=imperial";
         let today = new Date();
-        var date = today.getMonth()+ '/' + (today.getDate()) + '/'+today.getFullYear();
+        var date = today.getMonth() + '/' + (today.getDate()) + '/' + today.getFullYear();
 
         //variables for future forecast
         let weatherForecast = "https://api.openweathermap.org/data/2.5/forecast?q=";
@@ -32,13 +32,13 @@ $(document).ready(function () {
         let nameItem = cityInput
         window.localStorage.setItem(nameItem, JSON.stringify(cityInput));
         // return nameItem;
-        var hisBtn = $("<button class='btn'>").attr("value",  JSON.parse(localStorage.getItem(nameItem)));
-        $("#history-section").append(hisBtn);      
+        var hisBtn = $("<button class='btn'>").attr("value", JSON.parse(localStorage.getItem(nameItem)));
+        $("#history-section").append(hisBtn);
 
 
         //full weather api url after search is submitted
         let weather = weatherSearch + cityInput + unitsQuery + weatherAppid + apiKey;
-        
+
         //ajax call to api to get weather
         $.ajax({
             url: weather,
@@ -72,10 +72,10 @@ $(document).ready(function () {
             var longitude = res.coord.lon;
 
             //uv index api url
-            let uvIndexUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=";
+            let uvIndexUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=";
             let lonQuery = "&lon=";
             let uvIndexSearch = uvIndexUrl + latitude + lonQuery + longitude + weatherAppid + apiKey;
-            
+
             //ajax pull call for uv index
             $.ajax({
                 url: uvIndexSearch,
@@ -85,7 +85,7 @@ $(document).ready(function () {
                 $("#uv-index").text("UV Index: " + uvIndex);
                 if (uvIndex < 4) {
                     $("#uv-index").attr("class", "favorable");
-                } else if (uvIndex >= 4 && uvIndex > 8){
+                } else if (uvIndex >= 4 && uvIndex > 8) {
                     $("#uv-index").attr("class", "moderate");
                 } else {
                     $("#uv-index").attr("class", "severe");
@@ -97,11 +97,11 @@ $(document).ready(function () {
                 url: forecast,
                 method: "GET"
             }).then(function (res) {
-                var day1 = today.getMonth()+ '/' + (today.getDate() + 1) + '/'+today.getFullYear();
-                var day2 = today.getMonth()+ '/' + (today.getDate() + 2) + '/'+today.getFullYear();
-                var day3 = today.getMonth()+ '/' + (today.getDate() + 3) + '/'+today.getFullYear();
-                var day4 = today.getMonth()+ '/' + (today.getDate() + 4) + '/'+today.getFullYear();
-                var day5 = today.getMonth()+ '/' + (today.getDate() + 5) + '/'+today.getFullYear();
+                var day1 = today.getMonth() + '/' + (today.getDate() + 1) + '/' + today.getFullYear();
+                var day2 = today.getMonth() + '/' + (today.getDate() + 2) + '/' + today.getFullYear();
+                var day3 = today.getMonth() + '/' + (today.getDate() + 3) + '/' + today.getFullYear();
+                var day4 = today.getMonth() + '/' + (today.getDate() + 4) + '/' + today.getFullYear();
+                var day5 = today.getMonth() + '/' + (today.getDate() + 5) + '/' + today.getFullYear();
 
                 $("#day-1").text(day1);
                 $("#day-2").text(day2);
